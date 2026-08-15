@@ -85,10 +85,10 @@ ulElement.insertAdjacentHTML("beforeend", elements);
 ulElement.addEventListener("click", handleClick);
 
 function handleClick(event) {
-  event.preventDefault();
   if (!event.target.classList.contains("gallery-image")) {
     return;
   }
+  event.preventDefault();
   const instance = basicLightbox.create(`
     <img src="${event.target.dataset.source}" />
 `);
