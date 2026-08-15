@@ -86,7 +86,7 @@ ulElement.addEventListener("click", handleClick);
 
 function handleClick(event) {
   event.preventDefault();
-  if (event.target === event.currentTarget) {
+  if (!event.target.classList.contains("gallery-image")) {
     return;
   }
   const instance = basicLightbox.create(`
